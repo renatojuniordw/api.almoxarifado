@@ -1,0 +1,26 @@
+{
+    "server": {
+        "port": 8080
+    },
+    "configSMTP": {
+        "host": "smtp.gmail.com",
+        "service": "smtp.gmail.com",
+        "port": 587,
+        "secure": false,
+        "auth": {
+            "user": "junioriptv.net@gmail.com",
+            "pass": "r3nat1nh0123"
+        }
+    },
+    "configDatabase": {
+        "database": "u488253619_crud",
+        "dialect": {
+            "dialect": "mysql",
+            "host": "213.190.6.1"
+        },
+        "auth": {
+            "user": "u488253619_crud_user",
+            "pass": "@R3nat1nh0123"
+        }
+    }
+}
