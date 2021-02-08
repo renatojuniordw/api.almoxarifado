@@ -9,11 +9,9 @@ module.exports = app => {
             .then(function (item) {
                 res.status(200).json(item);
                 next();
-                console.log(item); //Item gravado
             }).catch(function (err) {
                 res.status(400).json(err);
                 next();
-                console.log(err); //Erro ao gravar
             });
 
     };
@@ -24,22 +22,20 @@ module.exports = app => {
             .then(function (item) {
                 res.status(200).json(item);
                 next();
-                console.log(item); //Item gravado
             }).catch(function (err) {
                 res.status(400).json(err);
                 next();
-                console.log(err); //Erro ao gravar
             });
 
     }
 
     controllerProduct.updateProduct= async (req, res, next) => {
 
-        const itemProduct = await itemProduct.findByPk(req.params.id);
+        const itemProduct = await productModel.findByPk(req.params.id);
 
         if (!!req.body) {
             itemProduct.description = !!req.body && !!req.body.description ? req.body.description : itemProduct.description;
-            itemProduct.preco = !!req.body && !!req.body.preco ? req.body.preco : itemProduct.preco;
+            itemProduct.amount = !!req.body && !!req.body.amount ? req.body.amount : itemProduct.amount;
             itemProduct.operator = !!req.body && !!req.body.operator ? req.body.operator : itemProduct.operator;
             itemProduct.name = !!req.body && !!req.body.name ? req.body.name : itemProduct.name;
         };
@@ -48,11 +44,9 @@ module.exports = app => {
             .then(function (item) {
                 res.status(200).json(item);
                 next();
-                console.log(item); //Item gravado
             }).catch(function (err) {
                 res.status(400).json(err);
                 next();
-                console.log(err); //Erro ao gravar
             });
 
     }
@@ -63,11 +57,9 @@ module.exports = app => {
             .then(function (item) {
                 res.status(200).json(item);
                 next();
-                console.log(item); //Item gravado
             }).catch(function (err) {
                 res.status(400).json(err);
                 next();
-                console.log(err); //Erro ao gravar
             });
 
     }

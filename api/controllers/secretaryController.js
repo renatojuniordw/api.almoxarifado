@@ -9,11 +9,9 @@ module.exports = app => {
             .then(function (item) {
                 res.status(200).json(item);
                 next();
-                console.log(item); //Item gravado
             }).catch(function (err) {
                 res.status(400).json(err);
                 next();
-                console.log(err); //Erro ao gravar
             });
 
     };
@@ -24,11 +22,9 @@ module.exports = app => {
             .then(function (item) {
                 res.status(200).json(item);
                 next();
-                console.log(item); //Item gravado
             }).catch(function (err) {
                 res.status(400).json(err);
                 next();
-                console.log(err); //Erro ao gravar
             });
 
     }
@@ -38,6 +34,7 @@ module.exports = app => {
         const itemSecretary = await secretaryModel.findByPk(req.params.id);
 
         if (!!req.body) {
+            itemSecretary.name = !!req.body && !!req.body.name ? req.body.name : itemSecretary.name;
             itemSecretary.operator = !!req.body && !!req.body.operator ? req.body.operator : itemSecretary.operator;
         };
 
@@ -45,11 +42,9 @@ module.exports = app => {
             .then(function (item) {
                 res.status(200).json(item);
                 next();
-                console.log(item); //Item gravado
             }).catch(function (err) {
                 res.status(400).json(err);
                 next();
-                console.log(err); //Erro ao gravar
             });
 
     }
@@ -60,11 +55,9 @@ module.exports = app => {
             .then(function (item) {
                 res.status(200).json(item);
                 next();
-                console.log(item); //Item gravado
             }).catch(function (err) {
                 res.status(400).json(err);
                 next();
-                console.log(err); //Erro ao gravar
             });
 
     }

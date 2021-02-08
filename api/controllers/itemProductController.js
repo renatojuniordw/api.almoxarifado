@@ -9,11 +9,9 @@ module.exports = app => {
             .then(function (item) {
                 res.status(200).json(item);
                 next();
-                console.log(item); //Item gravado
             }).catch(function (err) {
                 res.status(400).json(err);
                 next();
-                console.log(err); //Erro ao gravar
             });
 
     };
@@ -24,18 +22,16 @@ module.exports = app => {
             .then(function (item) {
                 res.status(200).json(item);
                 next();
-                console.log(item); //Item gravado
             }).catch(function (err) {
                 res.status(400).json(err);
                 next();
-                console.log(err); //Erro ao gravar
             });
 
     }
 
     itemProductController.updateItemProduct = async (req, res, next) => {
 
-        const itemProduct = await itemProduct.findByPk(req.params.id);
+        const itemProduct = await itemProductModel.findByPk(req.params.id);
 
         if (!!req.body) {
             itemProduct.cadum = !!req.body && !!req.body.cadum ? req.body.cadum : itemProduct.cadum;
@@ -48,11 +44,9 @@ module.exports = app => {
             .then(function (item) {
                 res.status(200).json(item);
                 next();
-                console.log(item); //Item gravado
             }).catch(function (err) {
                 res.status(400).json(err);
                 next();
-                console.log(err); //Erro ao gravar
             });
 
     }
@@ -63,11 +57,9 @@ module.exports = app => {
             .then(function (item) {
                 res.status(200).json(item);
                 next();
-                console.log(item); //Item gravado
             }).catch(function (err) {
                 res.status(400).json(err);
                 next();
-                console.log(err); //Erro ao gravar
             });
 
     }

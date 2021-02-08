@@ -9,11 +9,9 @@ module.exports = app => {
             .then(function (item) {
                 res.status(200).json(item);
                 next();
-                console.log(item); //Item gravado
             }).catch(function (err) {
                 res.status(400).json(err);
                 next();
-                console.log(err); //Erro ao gravar
             });
 
     };
@@ -24,11 +22,9 @@ module.exports = app => {
             .then(function (item) {
                 res.status(200).json(item);
                 next();
-                console.log(item); //Item gravado
             }).catch(function (err) {
                 res.status(400).json(err);
                 next();
-                console.log(err); //Erro ao gravar
             });
 
     }
@@ -51,11 +47,9 @@ module.exports = app => {
             .then(function (item) {
                 res.status(200).json(item);
                 next();
-                console.log(item); //Item gravado
             }).catch(function (err) {
                 res.status(400).json(err);
                 next();
-                console.log(err); //Erro ao gravar
             });
 
     }
@@ -66,11 +60,9 @@ module.exports = app => {
             .then(function (item) {
                 res.status(200).json(item);
                 next();
-                console.log(item); //Item gravado
             }).catch(function (err) {
                 res.status(400).json(err);
                 next();
-                console.log(err); //Erro ao gravar
             });
 
     }

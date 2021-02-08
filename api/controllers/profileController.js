@@ -9,11 +9,9 @@ module.exports = app => {
             .then(function (item) {
                 res.status(200).json(item);
                 next();
-                console.log(item); //Item gravado
             }).catch(function (err) {
                 res.status(400).json(err);
                 next();
-                console.log(err); //Erro ao gravar
             });
 
     };
@@ -24,11 +22,9 @@ module.exports = app => {
             .then(function (item) {
                 res.status(200).json(item);
                 next();
-                console.log(item); //Item gravado
             }).catch(function (err) {
                 res.status(400).json(err);
                 next();
-                console.log(err); //Erro ao gravar
             });
 
     }
@@ -38,7 +34,7 @@ module.exports = app => {
         const itemProfile = await profileModel.findByPk(req.params.id);
 
         if (!!req.body) {
-            itemProfile.codProfile = !!req.body && !!req.body.codProfile ? req.body.codProfile : itemProfile.codProfile;
+            itemProfile.cod_profile = !!req.body && !!req.body.cod_profile ? req.body.cod_profile : itemProfile.cod_profile;
             itemProfile.operator = !!req.body && !!req.body.operator ? req.body.operator : itemProfile.operator;
             itemProfile.name = !!req.body && !!req.body.name ? req.body.name : itemProfile.name;
         };
@@ -47,11 +43,9 @@ module.exports = app => {
             .then(function (item) {
                 res.status(200).json(item);
                 next();
-                console.log(item); //Item gravado
             }).catch(function (err) {
                 res.status(400).json(err);
                 next();
-                console.log(err); //Erro ao gravar
             });
 
     }
@@ -62,11 +56,9 @@ module.exports = app => {
             .then(function (item) {
                 res.status(200).json(item);
                 next();
-                console.log(item); //Item gravado
             }).catch(function (err) {
                 res.status(400).json(err);
                 next();
-                console.log(err); //Erro ao gravar
             });
 
     }
