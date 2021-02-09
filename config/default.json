@@ -8,8 +8,8 @@
         "port": 587,
         "secure": false,
         "auth": {
-            "user": "junioriptv.net@gmail.com",
-            "pass": "r3nat1nh0123"
+            "user": "",
+            "pass": ""
         }
     },
     "configDatabase": {
@@ -19,8 +19,8 @@
             "host": "213.190.6.1"
         },
         "auth": {
-            "user": "u488253619_crud_user",
-            "pass": "@R3nat1nh0123"
+            "user": "",
+            "pass": "@"
         }
     }
 }
