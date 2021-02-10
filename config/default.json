@@ -3,8 +3,8 @@
         "port": 8080
     },
     "configSMTP": {
-        "host": "smtp.gmail.com",
-        "service": "smtp.gmail.com",
+        "host": "",
+        "service": "",
         "port": 587,
         "secure": false,
         "auth": {
@@ -13,10 +13,10 @@
         }
     },
     "configDatabase": {
-        "database": "u488253619_crud",
+        "database": "",
         "dialect": {
             "dialect": "mysql",
-            "host": "213.190.6.1"
+            "host": ""
         },
         "auth": {
             "user": "",
